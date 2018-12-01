@@ -3,7 +3,6 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
-
 // 导入全局css
 import './assets/site/css/style.css'
 
@@ -39,6 +38,7 @@ Vue.use(VueRouter)
 
 //1.定义(路由)组件
 import index from './components/index.vue'
+import detail from './components/02.detail.vue'
 
 //2.定义路由规则
 let routes= [
@@ -50,7 +50,12 @@ let routes= [
   {
     path:'/index',
     component:index
-  }
+  },
+  {
+    path:'/detail/:artID',
+    component:detail
+  },
+
 ]
 //3.创建 router 实例，然后传 `routes` 配置
 let router=new VueRouter({

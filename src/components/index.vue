@@ -83,7 +83,8 @@
         <div class="wrap-box">
           <ul  class="img-list">
             <li v-for="(it,n) in item.datas" :key="it.artID">
-              <a href="#/site/goodsinfo/87" class>
+              <!-- <a href="#/site/goodsinfo/87" class> -->
+              <router-link :to="'/detail/'+it.artID">
                 <div class="img-box">
                   <img
                     :src="it.img_url"
@@ -102,7 +103,7 @@
                     </span>
                   </p>
                 </div>
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
